@@ -4,3 +4,7 @@
 
 #DB
 db.sqlite3
+
+
+# Pycache
+__pycache__/
