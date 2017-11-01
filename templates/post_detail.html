@@ -1,0 +1,14 @@
+{% extends 'index.html' %}
+{% load staticfiles %}
+
+{% if user.is_authenticated %}
+    {% block content %}
+    <h1>{{ object.title }}</h1>
+    <p>{{ object.text }}</p>
+        {% if object.author_id == user.id %}
+            <a href="{% url 'update_post' pk=object.id %}">Change post</a>
+        {% endif %}
+{% endblock %}
+    {% else %}
+        <a href="{% url 'login' %}">Please Login</a>
+{% endif %}

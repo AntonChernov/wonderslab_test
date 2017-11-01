@@ -1,0 +1,6 @@
+#.idea
+.idea/
+
+
+#DB
+db.sqlite3

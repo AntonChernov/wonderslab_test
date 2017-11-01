@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+{% load staticfiles %}
+
+{% if usr.is_authenticated %}
+    {% block content %}
+    <div>
+        <h1>Are uoy sure?</h1>
+        <form method="post" action="{% url '' %}">
+            <button type="submit">YES</button>
+        </form>
+            <a href="{% url '' %}" type="button">Cancel</a>
+    </div>
+    {% endblock %}
+    {% else %}
+        <a href="{% url 'login' %}">Please Login</a>
+{% endif %}

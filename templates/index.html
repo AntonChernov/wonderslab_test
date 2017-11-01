@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block title %}
+    {% endblock %}
+    {% block css %}
+    {% endblock %}
+</head>
+<body>
+{% if user.is_authenticated %}
+{% block content %}
+{% endblock %}
+{% block pagination %}
+{% endblock %}
+    {% else %}
+    <a href="{% url 'login' %}">Please Login</a>
+{% endif %}
+
+</body>
+{% block js %}
+{% endblock %}
+</html>

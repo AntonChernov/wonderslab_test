@@ -1,0 +1,12 @@
+{% extends 'index.html' %}
+{% load staticfiles %}
+
+
+{% block content %}
+    <form method="post" action="{% url 'update_post' pk=form.instance.id %}">
+    {% csrf_token %}
+            {{ form.as_p }}
+    <button type="submit">Change</button>
+    <a href="{% url 'posts' %}" type="button">Cancel</a>
+    </form>
+{% endblock %}
