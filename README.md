@@ -9,7 +9,7 @@ python3.6 -m venv venv_name
 --------------------------------
 pip install -r requirements.txt
 
-#### Execute migrations (migrations will create default data and django superuser)
+#### Execute migrations
 python manage.py migrate
 
 #### Follow this link http://127.0.0.1:8000/blog/users/
